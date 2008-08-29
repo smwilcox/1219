@@ -1,0 +1,30 @@
+<% form_for Asset.new, :html => {:multipart => true} do |form| %>
+	
+	<fieldset  title='Contributor Information'>
+	
+		<legend>Contributor Information</legend>
+		
+		<%= form.label :contributor_name %>
+		<%= form.text_field :contributor_name %><br/>
+	
+		<%= form.label :contributor_email %>
+		<%= form.text_field :contributor_email %><br/>
+	
+	</fieldset>
+	
+	<fieldset title='Asset Information'>
+		
+		<legend>Asset Information</legend>
+		
+		<%= form.label :name %>
+		<%= form.text_field :name %><br/>
+		
+		<%= form.label :description %>
+		<%= form.text_field :description %><br/>
+		
+		<%= form.label :asset %>
+		<%= form.file_field :asset %><br/>
+		
+		<%= submit_tag 'Contribe!' %>
+		
+<% end %>
