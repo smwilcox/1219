@@ -16,6 +16,9 @@
 		
 		<legend>Asset Information</legend>
 		
+		<%= form.label :asset %>
+		<%= form.file_field :asset %><br/>
+		
 		<%= form.label :name %>
 		<%= form.text_field :name %><br/>
 		
@@ -25,9 +28,6 @@
 		<%= form.label :tag_list %>
 		<%= form.text_field :tag_list %><br/>
 		
-		<%= form.label :asset %>
-		<%= form.file_field :asset %><br/>
-		
-		<%= submit_tag 'Contribute!' %>
+		<p align='right'><%= submit_tag 'Contribute!' %></p>
 		
 <% end %>
