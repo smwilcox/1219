@@ -1,5 +1,5 @@
-<% form_for Asset.new, :html => {:multipart => true} do |form| %>
-	
+<% form_for @asset, :html => {:multipart => true} do |form| %>
+	<%= form.error_messages %>
 	<fieldset  title='Contributor Information'>
 	
 		<legend>Contributor Information</legend>

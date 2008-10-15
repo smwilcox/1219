@@ -4,13 +4,17 @@ class AssetsController < ApplicationController
     @assets = Asset.find(:all)
   end
   
+  def new
+    @asset = Asset.new
+  end
+  
   def create
     @asset = Asset.new(params[:asset])
     if @asset.save
       redirect_to asset_url(@asset)
     else
       flash[:notice] = "Something went wrong!"
-      redirect_to :action => 'new'
+      render :action => 'new'
     end
   end
   
