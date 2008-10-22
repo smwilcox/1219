@@ -1,5 +1,7 @@
 class MinutesController < ApplicationController
   
+  before_filter :authenticate, :only => [:show, :index]
+  
   def index
     @minutes = Minute.find(:all)
   end
@@ -20,6 +22,14 @@ class MinutesController < ApplicationController
   
   def show
     @minute = Minute.find(params[:id])
+  end
+  
+  private
+  
+  def authenticate
+    authenticate_or_request_with_http_basic('1219 Curator') do |username, password|
+      username == '1219' and password == 'aoeu'
+    end
   end
   
 end
