@@ -12,10 +12,13 @@
 		<%= form.label :name, 'Name Your Minute' %>
 		<%= form.text_field :name %><br/>
 		
-		<%= form.label :description %>
-		<%= form.text_field :description %><br/>
+		<%= form.label :location %>
+		<%= form.text_field :location %>
 		
-		<%= form.label :tag_list %>
+		<%= form.label :description %>
+		<%= form.text_area :description, :cols => 26, :rows => 3 %><br/>
+		
+		<%= form.label :tag_list, 'Tags (comma-separated)' %>
 		<%= form.text_field :tag_list %><br/>
 				
 	</fieldset>

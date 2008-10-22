@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080829002807) do
+ActiveRecord::Schema.define(:version => 20081022185552) do
 
   create_table "minutes", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20080829002807) do
     t.integer  "minute_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "location"
   end
 
   create_table "taggings", :force => true do |t|

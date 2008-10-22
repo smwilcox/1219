@@ -4,8 +4,8 @@ form {  /* set width in form, not fieldset (still takes up more room w/ fieldset
   margin: 0;
   padding-left: 5px;
   min-width: 400px;
-  max-width: 500px;
-  width: 500px; 
+  max-width: 550px;
+  width: 550px; 
 	float: left;
 	/*border: 1px solid black;*/
 }
@@ -29,7 +29,7 @@ form fieldset legend {
 form label { 
 	display: block;  /* block float the labels to left column, set a width */
 	float: left; 
-	width: 150px; 
+	width: 180px; 
 	padding: 0; 
 	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
 	text-align: right; 
