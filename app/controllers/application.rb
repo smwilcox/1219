@@ -1,6 +1,3 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
 
@@ -8,8 +5,10 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'be6f8ba30623e66e69fa13793ab64db0'
   
-  # See ActionController::Base for details 
-  # Uncomment this to filter the contents of submitted sensitive data parameters
-  # from your application log (in this case, all fields with names like "password"). 
-  # filter_parameter_logging :password
+  def authenticate
+    authenticate_or_request_with_http_basic('1219 Curator') do |username, password|
+      username == '1219' and password == 'aoeu'
+    end
+  end
+  
 end

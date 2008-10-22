@@ -24,12 +24,4 @@ class MinutesController < ApplicationController
     @minute = Minute.find(params[:id])
   end
   
-  private
-  
-  def authenticate
-    authenticate_or_request_with_http_basic('1219 Curator') do |username, password|
-      username == '1219' and password == 'aoeu'
-    end
-  end
-  
 end
