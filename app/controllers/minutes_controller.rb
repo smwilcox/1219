@@ -13,6 +13,7 @@ class MinutesController < ApplicationController
   def create
     @minute = Minute.new(params[:minute])
     if @minute.save
+      Mailer.deliver_thankyou_mail(@minute)
       redirect_to '/thanks'
     else
       flash[:notice] = "Something went wrong!"
