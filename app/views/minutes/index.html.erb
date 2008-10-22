@@ -1,0 +1,6 @@
+<p><%= link_to 'Contribute an Minute', new_minute_path %></p>
+<ul>
+<%- @minutes.each do |minute| %>
+	<li><%= link_to minute.name, minute_url(minute) %></li>
+<%- end -%>
+</ul>

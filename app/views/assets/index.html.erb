@@ -1,6 +1,0 @@
-<p><%= link_to 'Contribute an Asset', new_asset_path %></p>
-<ul>
-<%- @assets.each do |asset| %>
-	<li><%= link_to asset.name, asset_url(asset) %></li>
-<%- end -%>
-</ul>

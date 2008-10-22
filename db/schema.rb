@@ -11,15 +11,15 @@
 
 ActiveRecord::Schema.define(:version => 20080829002807) do
 
-  create_table "assets", :force => true do |t|
+  create_table "minutes", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "contributor_name"
     t.string   "contributor_email"
     t.string   "cached_tag_list"
-    t.string   "asset_file_name"
-    t.string   "asset_content_type"
-    t.integer  "asset_file_size"
+    t.string   "minute_file_name"
+    t.string   "minute_content_type"
+    t.integer  "minute_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
