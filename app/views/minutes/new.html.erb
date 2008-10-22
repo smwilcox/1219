@@ -1,5 +1,25 @@
 <% form_for @minute, :html => {:multipart => true} do |form| %>
 	<%= form.error_messages %>
+	<fieldset title='Minute Information'>
+		
+		<legend>Minute Information</legend>
+		
+		<p>Filetypes accepted include: .doc, .txt, .jpg, .gif, .mp3, .mp4</p>
+		
+		<%= form.label :minute, 'Upload Your Minute' %>
+		<%= form.file_field :minute %><br/>
+		
+		<%= form.label :name, 'Name Your Minute' %>
+		<%= form.text_field :name %><br/>
+		
+		<%= form.label :description %>
+		<%= form.text_field :description %><br/>
+		
+		<%= form.label :tag_list %>
+		<%= form.text_field :tag_list %><br/>
+				
+	</fieldset>
+
 	<fieldset  title='Contributor Information'>
 	
 		<legend>Contributor Information</legend>
@@ -9,25 +29,9 @@
 	
 		<%= form.label :contributor_email %>
 		<%= form.text_field :contributor_email %><br/>
-	
-	</fieldset>
-	
-	<fieldset title='Minute Information'>
-		
-		<legend>Minute Information</legend>
-		
-		<%= form.label :minute %>
-		<%= form.file_field :minute %><br/>
-		
-		<%= form.label :name %>
-		<%= form.text_field :name %><br/>
-		
-		<%= form.label :description %>
-		<%= form.text_field :description %><br/>
-		
-		<%= form.label :tag_list %>
-		<%= form.text_field :tag_list %><br/>
-		
+
 		<p align='right'><%= submit_tag 'Contribute!' %></p>
+
+	</fieldset>
 		
 <% end %>
